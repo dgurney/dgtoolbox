@@ -1,7 +1,9 @@
-package main
+// +build !linux
+
+package builtin
 
 /*
-   The most fundamental commands of dgtoolbox. For other commands, see the builtin/ directory.
+   Exit command of dgtoolbox. For other commands, see the builtin/ directory.
    Copyright (C) 2020 Daniel Gurney
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -16,9 +18,10 @@ package main
 */
 
 import (
-	"fmt"
+	"os"
 )
 
-func ver() {
-	fmt.Printf("dgtoolbox v%s by Daniel Gurney. Licensed under GPLv3.\n", getVersion())
+// Exit exits the program.
+func Exit() {
+	os.Exit(0)
 }

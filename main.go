@@ -57,7 +57,7 @@ func main() {
 		case "..":
 			builtin.Shortcut(input[0])
 		case "exit":
-			exit()
+			builtin.Exit()
 		case "cd":
 			if len(input) == 1 {
 				fmt.Println("Specify a directory")
