@@ -17,11 +17,12 @@ package main
 
 import (
 	"bufio"
-	"dgtoolbox/builtin"
 	"fmt"
 	"os"
 	"runtime"
 	"strings"
+
+	"github.com/dgurney/dgtoolbox/builtin"
 )
 
 func main() {
