@@ -15,7 +15,7 @@ package main
    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-const version = "0.0.1"
+const version = "0.0.2"
 
 // git describe --tags --dirty
 var gitVersion string
