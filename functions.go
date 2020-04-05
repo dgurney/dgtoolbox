@@ -18,10 +18,17 @@ package main
 import (
 	"fmt"
 	"os"
+	"runtime"
+	"syscall"
 )
 
 func exit() {
-	os.Exit(0)
+	switch {
+	default:
+		os.Exit(0)
+	case runtime.GOOS == "linux" && os.Getpid() == 1:
+		syscall.Reboot(syscall.LINUX_REBOOT_CMD_POWER_OFF)
+	}
 }
 
 func ver() {
