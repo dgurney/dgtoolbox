@@ -44,6 +44,11 @@ func main() {
 		}
 		input := strings.Fields(strings.TrimSuffix(i, "\n"))
 
+		if len(input) == 0 {
+			// Let's not crash when the user inputs space and presses enter...
+			goto Beginning
+		}
+
 		// Handle aliases first, otherwise we could not alias built-in commands without convoluted if conditions
 		if len(builtin.GetAliasCommand(input[0])) != 0 {
 			// since our shell is naive, we must split the returned command before running it
