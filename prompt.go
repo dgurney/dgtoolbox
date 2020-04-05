@@ -20,10 +20,6 @@ import (
 )
 
 func ps1() string {
-	err := os.Setenv("PATH", "/")
-	if err != nil {
-		panic(err)
-	}
 	dir, err := os.Getwd()
 	if err != nil {
 		dir = "broken"
