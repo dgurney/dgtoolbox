@@ -2,7 +2,7 @@ package main
 
 /*
    Version information functionality of dgtoolbox
-   Copyright (C) 2020 Daniel Gurney
+   Copyright (C) 2021 Daniel Gurney
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation, either version 3 of the License, or
@@ -15,7 +15,7 @@ package main
    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-const version = "0.0.2"
+const version = "0.0.3"
 
 // git describe --tags --dirty
 var gitVersion string

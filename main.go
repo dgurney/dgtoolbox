@@ -2,7 +2,7 @@ package main
 
 /*
    dgtoolbox - a lackluster busybox-like program
-   Copyright (C) 2020 Daniel Gurney
+   Copyright (C) 2021 Daniel Gurney
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation, either version 3 of the License, or
@@ -95,11 +95,14 @@ func main() {
 		case "mod7":
 			switch {
 			default:
-				builtin.Mod7("", "")
+				builtin.Mod7("", "", false)
 			case len(input) == 2:
-				builtin.Mod7(input[1], "")
+				builtin.Mod7(input[1], "", false)
 			case len(input) == 3:
-				builtin.Mod7(input[1], input[2])
+				builtin.Mod7(input[1], input[2], false)
+			case len(input) == 4 && input[3] == "95":
+				fmt.Println("hit")
+				builtin.Mod7(input[1], input[2], true)
 			}
 		case "chicagokey":
 			switch {
